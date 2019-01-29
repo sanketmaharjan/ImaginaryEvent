@@ -1,0 +1,44 @@
+input,
+.btn,
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+.form-control,
+textarea {
+    width: 100%;
+    @include font-size(1.6);
+    @include border-radius(0);
+    
+    &:focus{
+        border-color:$color-brand;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 5px rgba(22, 226, 114, 0.5);
+    
+    }
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    border: none;
+    border-bottom: 1px solid #cbcbcb;
+    box-shadow: none;
+}
+
+.form-group {
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 100%;
+    
+}
+
+label{ 
+    font-weight: normal;
+}
+
+
+
+

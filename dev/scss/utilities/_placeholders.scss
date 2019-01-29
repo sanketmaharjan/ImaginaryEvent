@@ -1,0 +1,37 @@
+// Covering Background Images
+%bg-image {
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include vendor-prefix(background-size, cover);
+}
+
+// Clear gutter
+%clear-gutter {
+    margin: 0;
+    padding: 0;
+}
+
+// List None
+%list-none {
+    list-style-type: none;
+}
+
+// Content Gutter
+%content-gutter {
+    padding: 75px 0;
+}
+
+// Hiding text under the div
+%hide-text {
+    overflow: hidden;
+    text-indent: -9999px;
+    display: block;
+}
+
+// Header font
+%heading {
+    @include font($header-font, normal, 600);
+    margin: 0 0 15px;
+    line-height: 1.2;
+}

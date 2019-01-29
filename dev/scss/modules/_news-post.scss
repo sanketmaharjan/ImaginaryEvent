@@ -1,0 +1,13 @@
+.news-post{
+    &--title{
+        font-size: 1.4rem;
+    }
+    &--date{
+        font-size: 1.2rem;
+        color: $color-grey;
+    }
+    i{
+        color: $color-brand;
+    }
+
+}

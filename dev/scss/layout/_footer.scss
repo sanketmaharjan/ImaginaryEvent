@@ -1,0 +1,39 @@
+.theme-footer {
+    margin-top: 20px;
+    padding: 20px 60px;
+    background-color: $color-brand;
+    color: $color-white;
+    text-align: center;
+
+    &--left{
+        float: left;
+        @include breakpoint(below-sm) {
+            float: none;
+        }
+    }
+
+    &--right{
+        float: right;
+        @include breakpoint(below-sm) {
+            float: none;
+            margin-top: 20px;
+        }
+    }
+
+    &--logo{
+        height: 25px;
+        width: 25px;
+    }
+    
+    img{
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+    }
+
+    @include breakpoint(below-xs) {
+        float: none;
+        text-align: center;
+    }
+
+}

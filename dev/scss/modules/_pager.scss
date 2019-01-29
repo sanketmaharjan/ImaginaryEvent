@@ -1,0 +1,18 @@
+.pager{
+    background-color: transparent;
+    border: none;
+    color: $color-brand;
+    font-weight: bold;
+    margin: 0;
+    float: right;
+    li>a{
+        @include pager($color-brand, $color-grey-dark, $color-brand);
+        &.active{
+            color: $color-grey-dark;
+        }
+    }
+    .separator{
+        color: $color-grey-dark;
+    }
+
+}

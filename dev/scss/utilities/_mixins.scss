@@ -1,0 +1,285 @@
+// Font Size
+// eg: @include font-size(1); = 10px | 1rem
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+}
+
+// Font Family
+// eg: @include font($base-font, normal, 400);
+@mixin font($font, $style: normal, $weight: normal) {
+    font-family: $font;
+    font-style: $style;
+    font-weight: $weight;
+}
+
+// Icons Pseudo
+// eg: @include theme-pseudo; [within the pseudo class]
+// @mixin theme-pseudo {
+//     position: absolute;
+//     @include font($theme-icons, normal, normal);
+// }
+
+// Font Smoothing
+// eg: include font-smoothing(on);
+@mixin font-smoothing($value: on) {
+    @if $value==on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @if $value==off {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+
+// Links Mixin
+// eg: @include links($color-link, $color-link, $color-link-hover, $color-link);
+@mixin links($link, $visited, $hover, $active) {
+    & {
+        color: $link;
+        &:visited {
+            color: $visited;
+        }
+        &:hover {
+            color: $hover;
+            text-decoration: none;
+        }
+        &:active,
+        &:focus {
+            color: $active;
+            text-decoration: none;
+        }
+    }
+}
+
+//mixin pager
+@mixin pager($link, $hover, $active){
+    background-color: transparent;
+    border: none;
+    color: $color-brand;
+    &{
+        color: $link;
+        background-color: transparent;
+    }
+    &:hover{
+        color: $hover;
+        background-color: transparent;
+    }
+    &:active, &:focus{
+        color: $active;
+    }
+
+}
+
+
+// CSS Vendor Prefix
+// eg: @include vendor-prefix(background-size, cover);
+@mixin vendor-prefix($name, $argument) {
+    -webkit-#{$name}: #{$argument};
+    -ms-#{$name}: #{$argument};
+    -moz-#{$name}: #{$argument};
+    -o-#{$name}: #{$argument};
+    #{$name}: #{$argument};
+}
+
+// Truncating
+// eg: @include ellipsis(2em, 2);
+@mixin ellipsis ($max-height, $lines: 2) {
+    overflow: hidden;
+    max-height: $max-height;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;  
+    text-overflow: -o-ellipsis-lastline;
+  }
+
+// Positioning
+// eg: @include position(absolute, $top: 5px, $left: 5px);
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+// Placeholder
+// eg: @include placeholder($color-base);
+@mixin placeholder($color: $input-color-placeholder) {
+    &::-moz-placeholder {
+        color: $color;
+    } // Firefox 19+
+    &:-ms-input-placeholder {
+        color: $color;
+    } // Internet Egplorer 10+
+    &::-webkit-input-placeholder {
+        color: $color;
+    } // Safari and Chrome
+}
+
+// Rotate
+// eg: @include rotate(45deg);
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+// Translate 3D Transition
+// eg: @include translate3d(0,0,0);
+@mixin translate3d($x, $y, $z) {
+    -webkit-transform: translate3d($x, $y, $z);
+    -moz-transform: translate3d($x, $y, $z);
+    transform: translate3d($x, $y, $z);
+}
+
+// Border Radius
+// eg: @include border-radius(3px); | @include border-radius(5px 5px 0 0);
+@mixin border-radius($radius) {
+    @include vendor-prefix(border-radius, $radius);
+}
+
+// User Select
+/* eg: @include user-select(none); */
+@mixin user-select($user-select) {
+    -webkit-user-select: ($user-select);
+    -moz-user-select: ($user-select);
+    -ms-user-select: ($user-select);
+    user-select: ($user-select);
+}
+
+// Background Opacity mixin | Add opacity to a background color
+// eg. @include bg-opacity($color-white, .5);
+@mixin bg-opacity($color, $opacity) {
+    background-color: rgba($color, $opacity);
+}
+
+// Cross browser opacity
+// eg. @include opacity(0.8);
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// 100% circle
+// eg. @include circle(100px);
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    @include vendor-prefix(border-radius, 100%);
+}
+
+// Box Shadow
+// eg. @include box-shadow(0 5px 4px black(.75)); || [@include box-shadow(0 5px 4px black(.75)); || @include box-shadow(inset 0 5px 4px black(.75));] || @include box-shadow(inset 0 0px 0px 2px $color-15);
+@mixin box-shadow($value) {
+    @include vendor-prefix(box-shadow, $value);
+}
+
+// Text Shadow
+// eg. @include text-shadow(0 0 0);
+@mixin text-shadow($value) {
+    @include vendor-prefix(text-shadow, $value); //text-shadow: text-shadow($value);
+}
+
+// Box Sizing 
+// eg. @include box-sizing(border-box);
+@mixin box-sizing($box-model) {
+    @include vendor-prefix(box-sizing, $box-model);
+}
+
+// Calc
+// eg. @include calc(width, “100% - 50px”);
+@mixin calc($property, $expression) {
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+// Transition 
+// eg. @include transition(all,2s,ease-out);
+@mixin transition($what: all, $time: 0.7s, $how: ease-in-out) {
+    @include vendor-prefix(transition, $what $time $how);
+}
+
+// Vertically center with Table
+// eg. @include vertical-center-tbl(130px); || @include vertical-center-tbl(100%);
+@mixin vertical-center-tbl($content) {
+    height: $content;
+    display: table;
+    >* {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+    }
+}
+
+// Vertically center with Absolute Position
+// eg. @include centerer(false, true);[Centering vertically]
+// eg. @include centerer(true, false);[Centering horizontally]
+// eg. @include centerer;[Centering Both Side]
+@mixin centerer($horizontal: true, $vertical: true) {
+    position: absolute;
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @else if ($horizontal) {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    @else if ($vertical) {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+
+// Scale
+@mixin transform($content) {
+    @include vendor-prefix(transform($content));
+}
+
+// @include first-child(){background: red;}
+@mixin first-child() {
+    &:first-of-type {
+        @content;
+    }
+}
+
+@mixin last-child() {
+    &:last-of-type {
+        @content;
+    }
+}
+
+// Animations and keyframes
+//@include keyframes(slide-down) {
+//    0% { opacity: 1; }
+//    90% { opacity: 0; }
+//}
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+//[@include animation (loader 3s 300ms infinite ease-out);]
+//@include animation('slide-down 5s 3');
+@mixin animation($value) {
+    @include vendor-prefix(animation, $value);
+}

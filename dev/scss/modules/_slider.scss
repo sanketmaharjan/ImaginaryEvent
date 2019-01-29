@@ -1,0 +1,64 @@
+.slider{
+    margin-bottom: 20px;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel{
+    .carousel-inner {        
+    .fill {
+        background-image: url("/images/sample4.jpg");
+        width: 50%;
+        height: 200px;
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        display: relative;
+        float: left;
+
+        }
+        .fill-2 {
+            background-color: $color-brand;
+            width: 50%;
+            height: 200px;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            display: relative;
+            float: right;
+
+            &--caption{
+                color: $color-white;
+                padding: 20px;
+            }
+    
+        }
+    }
+    
+    .carousel-control{
+        position: absolute;
+        top: 88%;
+        bottom: 100%;
+        width: 95%;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+
+        .icon-next, {
+            right: 90%;
+        } 
+
+        .icon-prev{
+            left: 5%;
+        }
+
+    }
+}

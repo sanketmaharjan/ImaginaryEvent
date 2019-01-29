@@ -1,0 +1,18 @@
+.panel{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    z-index: 3;
+    margin-top: -100px;
+    
+    &--design-1{
+        max-width: 1200px;
+        padding: 20px;
+ 
+    }
+
+    @include breakpoint (below-xs){
+        max-width: 350px;
+    }
+}
+

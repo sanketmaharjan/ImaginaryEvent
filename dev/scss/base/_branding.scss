@@ -1,0 +1,34 @@
+// Color Variables
+$color-white: 	#ffffff;
+$color-black: #000000;
+$color-grey: #ABABAB;
+$color-grey-dark: #616161;
+$color-brand: #28b470;
+$color-brand-dark: #125334;
+$color-brand-highlight: #44ffa5;
+$color-grey: #cbcbcb;
+$color-grey-dark: #616161;
+
+
+.color {
+    &-white {
+        color: $color-white;
+    }
+
+    &-black {
+        color: $color-black;
+    }
+
+    &-grey{
+        color: $color-grey;
+    }
+
+    &-brand {
+        color: $color-brand;
+    }
+
+    &-brand-dark{
+        color: $color-brand-dark;
+    }
+
+}

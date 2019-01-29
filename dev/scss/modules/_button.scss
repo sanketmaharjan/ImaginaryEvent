@@ -1,0 +1,125 @@
+.btn {
+    border: none;
+    padding: 15px 40px;
+    @include font-size(1.6);
+    line-height: 1;
+    @include transition(all, .5s, ease);
+    @include border-radius(2px);
+
+    &-full {
+        width: 100%;
+    }
+
+    i {
+        vertical-align: middle;
+    }
+
+    &--xxl{
+        padding: 15px 90px;
+    }
+    
+    &--xl {
+        padding: 15px 40px;
+    }
+
+    &--lg {
+        padding: 10px 35px;
+    }
+
+    &--md {
+        padding: 7px 30px;
+    }
+
+    &--sm {
+        padding: 6px 25px;
+    }
+
+    &--xs {
+        padding: 2px 10px;
+        height: auto;
+        min-height: 8px;
+    }
+
+    &-brand {
+        background-color: $color-brand;
+        border-color: $color-brand;
+        color: $color-white;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: darken($color-brand, 20%);
+            border-color: darken($color-brand, 20%);
+            color: $color-white;
+        }
+    }
+
+    &-brand-white {
+        background-color: transparent;
+        border-color: $color-white;
+        color: $color-brand;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: darken($color-brand, 20%);
+            border-color: darken($color-brand, 20%);
+            color: $color-white;
+        }
+    }
+
+    &-default {
+        border: 1px solid $color-brand;
+        background-color: transparent;
+        border-color: $color-brand;
+        position: relative;
+        color: $color-brand;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border: 1px solid transparent;
+            color: $color-white;
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &:active {
+            &:focus {
+                color: $color-white;
+            }
+        }
+    }
+
+    &-default-white {
+        border: 1px solid $color-white;
+        background-color: transparent;
+        position: relative;
+        color: $color-white;
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: $color-white;
+            border: 1px solid transparent;
+        }
+    }
+
+
+}
+
+a,
+button,
+.btn {
+    &:focus {
+        outline: none;
+    }
+}
+
