@@ -1,4 +1,4 @@
 a{
-    @include links($color-brand, $color-brand, $color-brand-highlight, $color-brand);
+    @include links($color-brand, $color-brand, $color-brand, $color-brand);
     cursor: pointer;
 }

@@ -1,134 +1,3 @@
-// label{
-//     margin:0;
-// }
-
-// .menu-toggle {
-//     margin: 0;
-//     cursor: pointer;
-//     display: inline-block;
-//     position: absolute;
-//     top: 40px;
-//     right: 35px;
-//     width: 5px;
-//     z-index: 4;
-//     transition: transform 0.3s ease;
-
-//   }
-  
-//   .line {
-//     display: block;
-//     width: 25px;
-//     height: 3px;
-//     background: $color-brand;
-//     border-radius: 0;
-//     transition: transform 0.3s ease;
-//     margin-top: 3px;
-//   }
-  
-//   .overlay {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     z-index: 2;
-//     pointer-events: none;
-//     background: rgba(0,0,0,0.5);
-//     opacity: 0;
-//     transition: opacity 0.3s ease;
-//   }
-  
-//   nav {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     width: 300px;
-//     background: $color-white;
-//     // padding: 50px 30px 30px;
-//     transform: translateX(100%);
-//     transition: all 0.3s ease;
-//     z-index: 3;
-//     ul{
-//         list-style-type: none;
-//         margin-top: 75px;
-//         padding: 0px;
-//         float: right;
-//         width: 100%;
-//     }
-
-//     li{
-//         margin-top: 1px;
-//         background-color: #f4f4f4;
-//         width: 100%;
-//         padding: 10px;
-//         text-align: right;
-
-//         ::after{
-//             content: '';
-//             background-color: red;
-//             width: 10px;
-//         }
-
-//         a{
-//             text-align: right;
-//             ::active{
-//                 background-color: red;
-//             }
-//         }
-//     }    
-// }
-    
-//   #menu-toggle {
-//     position: fixed;
-//     left: -99999999px;
-    
-//     &:checked {
-//       ~ .menu-toggle {
-//         transform: rotate(-180deg);
-        
-//         .line-1 {
-//           transform: translateY(5px) rotate(45deg) scale(1.1, 1);
-//           transform-origin: 50%;
-//         }
-  
-//         .line-2 {
-//           transform: scale(0);
-//         }
-  
-//         .line-3 {
-//           transform: translateY(-10px) rotate(-45deg) scale(1.1, 1);
-//           transform-origin: 50%;
-//         }
-//       }
-      
-//       ~ nav {
-//         transform: translateX(0);
-        
-//         &:after {
-//           opacity: 1;
-//         }
-        
-//         ul {
-//           li {
-//             transform: translateX(0);
-//           }
-//         }
-//       }
-      
-//       ~ .overlay {
-//         opacity: 1;
-//         pointer-events: all;
-//       }
-      
-//       ~ .page {
-//         transform: translateX(300px);
-//       }
-//     }
-//   }
-  
-
-// off canvas navbar
 
 .menu-box{
   margin-top: 45px;
@@ -204,9 +73,13 @@ nav ul li a {
     border-radius: 3px;
     display: inline-block;
     position: absolute;
-    right: 200px;
+    right: 280px;
     width: 40px;
     height: 40px;
+
+    @include breakpoint(xs) {
+      right: 200px;
+    }
 
     .bar {
       display: block;
@@ -284,4 +157,9 @@ nav ul li a {
       color: $color-brand;
     }
   }
+}
+
+.nav-text{
+  float: left;
+  padding-left: 20px;
 }
