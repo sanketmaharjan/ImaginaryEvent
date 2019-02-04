@@ -1,15 +1,21 @@
 .header{
     padding: 30px;
+    // padding-left: 0;
     width: 100%;
 
     &--left{
         vertical-align: middle;
         float: left;
+        
     }
 
     &--right{
         vertical-align: middle;
         float: right;
+
+        @include breakpoint(xs){
+            float: none;
+        }
     }
   
     &-logo{

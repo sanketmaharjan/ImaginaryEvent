@@ -1,5 +1,15 @@
 .title {
     display: block;
+
+    &--logo{
+        @include font($header-font, normal, 600);
+        @include font-size(3.6);
+        color: $color-white;
+        
+        @include breakpoint(xs) {
+            @include font-size(2.6);
+        }
+    }
     
     &--primary {
         @include font($header-font, normal, 600);

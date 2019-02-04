@@ -6,9 +6,39 @@
     &--icons-1{
         text-align: center;
         margin-top: 10px;
+
         ul{
             text-decoration: none;
             display: inline-flex;
+            padding: 0;
+        }
+
+        li{
+            list-style-type: none;
+        }
+
+        a{
+            i{
+                padding: 5px;
+                color: $color-white;
+                @include links($color-white, $color-brand, $color-brand, $color-black);
+            }
+        }
+
+        // @include breakpoint(xs){
+        //     ul{
+        //         padding: 0;
+        //         margin: 0;
+
+        //     }
+        // } 
+    }
+
+    &--icons-2{
+        ul{
+            text-decoration: none;
+            display: inline-flex;
+            padding: 0;
         }
 
         li{
@@ -18,7 +48,7 @@
             i{
                 padding: 5px;
                 color: $color-white;
-                @include links($color-white, $color-brand, $color-brand, $color-black);
+                @include links($color-brand, $color-brand, $color-brand, $color-black);
             }
         }
     }

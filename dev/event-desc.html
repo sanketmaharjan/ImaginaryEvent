@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+
     <title>Imaginary Event</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.min.css">
 
-
 </head>
 
 <body>
     <main class="theme-main">
+        @@include('includes/navigation.html')
         @@include('includes/banner.html')
         <section class="content">
             <div class="container">
@@ -26,30 +27,25 @@
                             <h2 class="title--primary title__underline">EVENTS</h2>
                         </div>
                         <div class="col-md-6">
-                            <div class="pager">
-                                <a href="#">
-                                   <span>
-                                       <i class="fas fa-angle-double-left"></i>
-                                       <h3 class="title--default d-inline-block">BACK TO ALL EVENTS</h3>
-                                    </span>
-                                </a>
+                            <div class="pager pager--design-1">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="title--default">
+                                            <i class="fas fa-angle-double-left"></i> BACK TO ALL EVENTS
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-
                     <hr>
                     <div class="row m-t-20">
-                        <div class="col-md-2">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h2 class="title--secondary title__underline">DATE:</h2>
-                                </div>
-                            </div>
+                        <div class="col-md-3">
                             <div class="row">
                                 <div class="col-md-12">
                                     <span>  
-                                        <h3 class="title--default">CALL US</h3>
-                                        <p>July 24, 2015 / 12:30am - September 2, 2015 / 03:30am</p>
+                                        <h3 class="title--default">DATE</h3>
+                                        <p>July 15, 2015 / 12:00 AM - September 25, 2016 / 11:20 AM </p>
                                     </span>
                                 </div>
                             </div>
@@ -57,49 +53,49 @@
                                 <div class="col-md-12">
                                     <span>    
                                         <h3 class="title--default">LOCATION</h3>
-                                        <p>2288 Browdway New York, USA</p>
+                                        <p>3931 Baltimore , Philadelphia, PA, 
+                                                United States 19104</p>
                                     </span>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <button type="submit" class="btn btn-brand btn--lg m-t-20">RSVP</button>
+                                <div class="col-md-1">
+                                    <button type="submit" class="btn btn-brand btn--lg">RSVP</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <figure class="image-box">
-                                    <img src="images/sample5.jpg" alt="">
-                                </figure>
+                                <div class="col-md-12 m-b-20">          
+                                    <div class="image-box">
+                                        <figure>
+                                            <img src="images/sample3.jpg" alt="">
+                                        </figure>
+                                    </div>             
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col-md-12">          
+                                    <h2 class="title--secondary title__underline">LOREM IPUSUM DOLAR SET AMET</h2> 
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, laudantium placeat repudiandae voluptas dolor,
+                                        inventore provident quas nihil officiis, vel saepe officia alias esse nam. At rem nesciunt quae quia?
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, repudiandae.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, laudantium placeat repudiandae voluptas dolor,
+                                        inventore provident quas nihil officiis, vel saepe officia alias esse nam. At rem nesciunt quae quia?
+                                    </p>               
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h2 class="title--secondary title__underline">LOREM EPSUM DOLER SET AMET</h2>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                        Ab sit voluptatibus vel, deleniti expedita id est consequatur ad unde,
-                                        doloribus atque ex aut vero laboriosam odio quae quidem explicabo cupiditate autem.
-                                        Reprehenderit praesentium, eligendi eum temporibus sed aperiam dolorum,
-                                        consequatur cupiditate amet minus ea. Rem laudantium aperiam vel voluptas illo?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Nam magni similique rerum dignissimos eaque nisi cum delectus ipsa commodi iusto consequatur velit magnam,
-                                        recusandae earum? Hic voluptate fugit delectus tenetur,
-                                        pariatur animi ipsa laboriosam dolor iure reprehenderit ratione maiores ab quos optio unde maxime commodi,
-                                        laborum culpa omnis! Eligendi, architecto.
-                                    </p>
                                     <div class="map">
-                                        <div class="map m-t-10">
-                                                <iframe width="100%" height="250" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=jhamiskhel+(Your%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                                            </iframe>
-                                        </div>
-                                    </div>
+                                        <iframe src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=pagevamp+(Title)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%">
+                                        </iframe>        
+                                    </div> 
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 p-r-50">
                             <div class="row">
                                 <div class="col-md-12">
                                     <h2 class="title--secondary title__underline">PHOTO GALLERY</h2>
@@ -107,39 +103,41 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="row m-b-5">
-                                            <div class="col-md-4">
-                                            <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                    <div class="image-box image-box--right">
+                                        <div class="row">
+                                            <div class="col-md-4 p-r-0 p-l-0">
+                                                <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                            </div>
+                                            <div class="col-md-4 p-r-0 p-l-0">
+                                                <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                            </div>
+                                            <div class="col-md-4 p-r-0 p-l-0">
+                                                <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                            </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                        <div class="row">
+                                            <div class="col-md-4 p-r-0 p-l-0">
+                                                <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                            </div>
+                                            <div class="col-md-4 p-r-0 p-l-0">
+                                                <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                            </div>
+                                            <div class="col-md-4 p-r-0 p-l-0">
+                                                <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                            </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                        <div class="row">
+                                            <div class="col-md-4 p-r-0 p-l-0">
+                                                <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                            </div>
+                                            <div class="col-md-4 p-r-0 p-l-0">
+                                                <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                            </div>
+                                            <div class="col-md-4 p-r-0 p-l-0">
+                                                <img src="images/sample6.jpg" class="img-responsive " alt="">
+                                            </div>
+                                            <button type="submit" class="btn btn-brand btn--lg m-t-20 pull-right">MORE ALBUMS</button>
                                         </div>
-                                    </div>
-                                    <div class="row m-b-5">
-                                        <div class="col-md-4">
-                                            <img src="images/sample6.jpg" class="img-responsive " alt="">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <img src="images/sample6.jpg" class="img-responsive " alt="">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <img src="images/sample6.jpg" class="img-responsive " alt="">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="images/sample6.jpg" class="img-responsive " alt="">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <img src="images/sample6.jpg" class="img-responsive " alt="">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <img src="images/sample6.jpg" class="img-responsive " alt="">
-                                        </div>
-                                        <button type="submit" class="btn btn-brand btn--lg m-t-20 pull-right">MORE ALBUMS</button>
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +149,7 @@
                                             <div class="col-xs-1">
                                                 <i class="far fa-file-alt"></i> 
                                             </div>
-                                            <div class="col-xs-11">
+                                            <div class="col-xs-10">
                                                 <span class="news-post--title">
                                                     Lorem ipsum dolor sit amet consectetur.
                                                 </span><br>
@@ -165,7 +163,7 @@
                                             <div class="col-xs-1">
                                                 <i class="far fa-file-alt"></i> 
                                             </div>
-                                            <div class="col-xs-11">
+                                            <div class="col-xs-10">
                                                 <span class="news-post--title">
                                                     Lorem ipsum dolor sit amet consectetur.
                                                 </span><br>

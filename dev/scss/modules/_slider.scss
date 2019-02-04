@@ -21,6 +21,12 @@
         -o-background-size: cover;
         display: relative;
         float: left;
+        @include breakpoint(sm) {
+            width: 100%;
+        }
+        @include breakpoint(xs) {
+            width: 100%;
+        }
 
         }
         .fill-2 {
@@ -34,7 +40,12 @@
             -o-background-size: cover;
             display: relative;
             float: right;
-
+            @include breakpoint(sm) {
+                width: 100%;
+            }
+            @include breakpoint(xs) {
+                width: 100%;
+            }
             &--caption{
                 color: $color-white;
                 padding: 20px;
@@ -51,13 +62,23 @@
         font-size: 20px;
         color: #fff;
         text-align: center;
-
+        opacity: 1;
+        @include breakpoint(sm) {
+            top: 44%;
+        }
+        @include breakpoint(sm) {
+            top: 44%;
+        }
         .icon-next, {
-            right: 90%;
+            left: -1%;
+            background-color: $color-brand;
+        
         } 
 
         .icon-prev{
-            left: 5%;
+            left: 2%;
+            background-color: $color-brand;
+     
         }
 
     }

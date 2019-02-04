@@ -4,7 +4,7 @@
     @include font-size(1.6);
     line-height: 1;
     @include transition(all, .5s, ease);
-    @include border-radius(2px);
+    @include border-radius(5px);
 
     &-full {
         width: 100%;
@@ -27,7 +27,8 @@
     }
 
     &--md {
-        padding: 7px 30px;
+        // padding: 7px 30px;
+        padding: 10px 20px 8px;
     }
 
     &--sm {
@@ -94,9 +95,9 @@
 
     &-default-white {
         border: 1px solid $color-white;
-        background-color: transparent;
+        background-color: #ffffff;
         position: relative;
-        color: $color-white;
+        color: $color-brand;
 
         &:hover {
             &:after {
@@ -106,9 +107,9 @@
 
         &:hover,
         &:focus {
-            background-color: transparent;
-            color: $color-white;
-            border: 1px solid transparent;
+            background-color: #ffffff;
+            color: $color-brand;
+            border: 1px solid $color-brand;
         }
     }
 

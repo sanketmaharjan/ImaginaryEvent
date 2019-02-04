@@ -1,7 +1,16 @@
 .banner{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sample3.jpg');
-    @extend %bg-image;
-    height: 80vh;
+
+    &--design-1{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sample3.jpg');
+        @extend %bg-image;
+        height: 100vh;
+    }
+
+    &--design-2{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sample3.jpg');
+        @extend %bg-image;
+        height: 40vh;
+    }
 
     &-info{
         margin-left: auto;
