@@ -17,6 +17,7 @@ var gulp = require('gulp'),
     bs = require('browser-sync').create(),
     webstandards = require('gulp-webstandards'),
     outputPath = 'output';
+    //  webp = require('gulp-webp');
 
 
 // Compile sass into CSS & auto-inject into browsers
@@ -85,6 +86,8 @@ gulp.task('images', function() {
         }))
         .pipe(gulp.dest('dist/images'))
 });
+
+
 
 
 // Static Server with files compress without Styleguide

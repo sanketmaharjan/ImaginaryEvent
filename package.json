@@ -26,5 +26,9 @@
     "gulp-util": "^3.0.8",
     "gulp-webstandards": "^0.1.1",
     "jshint": "^2.9.4"
+  },
+  "dependencies": {
+    "gulp-webp": "^4.0.1",
+    "imagemin-webp": "^5.0.0"
   }
 }

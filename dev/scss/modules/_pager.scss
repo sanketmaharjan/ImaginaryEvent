@@ -16,6 +16,13 @@
         .separator{
             color: $color-grey-dark;
         }
+
+        @include breakpoint(xs) {
+            ul{
+                padding: 0;
+            }
+            float: left;
+        }
     }
 
     &--design-2{
