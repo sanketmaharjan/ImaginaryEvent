@@ -45,6 +45,7 @@
             }
             @include breakpoint(xs) {
                 width: 100%;
+                height: 245px;
             }
             &--caption{
                 color: $color-white;
@@ -65,20 +66,26 @@
         @include breakpoint(sm) {
             top: 44%;
         }
-        @include breakpoint(sm) {
-            top: 44%;
+        @include breakpoint(xs) {
+            top: 40%;
         }
-        .icon-next, {
+        .icon-next{
             left: -1%;
             background-color: $color-brand;
-        
+            @include breakpoint(xs){
+                left: 4%;
+            }
         } 
-
         .icon-prev{
             left: 2%;
             background-color: $color-brand;
-     
+            @include breakpoint(xs){
+                left: 5%;
+            }
         }
-
     }
+}
+
+.carousel-fix-height{
+    position: relative;
 }

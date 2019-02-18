@@ -6,7 +6,6 @@
         cursor: pointer;
     }
     
- 
     &--design-1 {
         position: relative;
         filter: grayscale(80%);
@@ -20,8 +19,8 @@
         
         button{
             position: absolute;
-            margin-top: -30px;
             margin-left: 10px;
+            bottom: 60px;
         }
 
         figcaption{
@@ -48,6 +47,22 @@
         // margin-left: 15px;
         // margin-right: 15px;
         margin: 15px;
+
+        .img-holder{
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            filter: grayscale(80%);
+            -webkit-filter: grayscale(80%);
+            -webkit-transition: all .6s ease;
+            -webkit-backface-visibility: hidden;
+            &:hover{
+                filter: none;
+                -webkit-filter: grayscale(0%);
+            }
+        }
+        
     }
 
     img {

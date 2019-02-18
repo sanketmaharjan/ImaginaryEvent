@@ -6,9 +6,10 @@
     margin-top: -100px;
     
     &--design-1{
+        position: relative;
         max-width: 1200px;
         padding: 20px;
- 
+
     }
 
     @include breakpoint (below-xs){

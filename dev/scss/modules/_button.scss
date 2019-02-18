@@ -36,6 +36,11 @@
     }
 
     &--xs {
+        padding: 5px 10px;
+        height: auto;
+        min-height: 8px;
+    }
+    &--xxs {
         padding: 2px 10px;
         height: auto;
         min-height: 8px;

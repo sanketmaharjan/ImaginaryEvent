@@ -2,19 +2,21 @@
     padding: 30px;
     // padding-left: 0;
     width: 100%;
+    position: absolute;
+    z-index: 999;
 
     &--left{
         vertical-align: middle;
         float: left;
-        
     }
 
     &--right{
         vertical-align: middle;
         float: right;
-
+        margin-right: 100px;
         @include breakpoint(xs){
             float: none;
+            display: inline;
         }
     }
   

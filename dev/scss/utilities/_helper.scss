@@ -44,8 +44,9 @@
 }
 
 .truncate {
+
     &--1-line {
-        @include ellipsis(20px, 1);
+        @include ellipsis(35px, 1);
     }
 
     &--2-line {
@@ -73,6 +74,7 @@
             opacity: .70;
         }
     }
+    
 }
 
 .rounded {

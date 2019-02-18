@@ -1,25 +1,33 @@
 .banner{
 
     &--design-1{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sample3.jpg');
-        @extend %bg-image;
-        height: 100vh;
+        // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sample3.jpg');
+        // @extend %bg-image;
+        // height: 100vh;
+        // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        .slider-size{
+            // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            height: 100vh;
+        }
     }
 
     &--design-2{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sample3.jpg');
-        @extend %bg-image;
-        height: 40vh;
+        // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sample3.jpg');
+        // @extend %bg-image;
+        // height: 40vh;
+        .slider-size {
+            height: 250px; 
+          }
+                  
     }
-
     &-info{
         margin-left: auto;
         margin-right: auto;
-        margin-top: 100px;
+        margin-top: 200px;
         text-align: center;
         color: $color-white;
         width: 100%;
-        height: auto;
+        position: absolute;
+        z-index: 999;
     }
-
 }

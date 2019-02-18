@@ -16,10 +16,24 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     bs = require('browser-sync').create(),
     webstandards = require('gulp-webstandards'),
+    // webp = require("imagemin-webp"),
+    // extReplace = require("gulp-ext-replace"),
     outputPath = 'output';
     //  webp = require('gulp-webp');
 
 
+    //conversion to webp
+    gulp.task("exportWebP", function() {
+        return gulp.src('dev/images/**/*')
+        .pipe(imagemin([
+            webp({
+            quality: 75
+            })
+        ]))
+        .pipe(extReplace(".webp"))
+        .pipe(gulp.dest('dist/images/webp'));
+    });
+    
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
     return gulp.src("dev/scss/*.scss")
@@ -36,13 +50,11 @@ gulp.task('sass', function() {
         .pipe(bs.stream());
 });
 
-
 // Copy web fonts to dist
 gulp.task('fonts', function() {
     return gulp.src(['dev/fonts/**'])
         .pipe(gulp.dest('dist/fonts'))
 });
-
 
 // HTML minify
 gulp.task('htmlmin', function() {
@@ -60,7 +72,6 @@ gulp.task('htmlmin', function() {
         .pipe(bs.stream());
 });
 
-
 // Compile Scripts and after minimizing auto-inject into browsers
 gulp.task('scripts', function() {
     return gulp.src('dev/scripts/**/*.js')
@@ -74,7 +85,6 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist/scripts'))
 });
 
-
 // Images minify
 gulp.task('images', function() {
     return gulp.src('dev/images/**/*')
@@ -87,9 +97,6 @@ gulp.task('images', function() {
         .pipe(gulp.dest('dist/images'))
 });
 
-
-
-
 // Static Server with files compress without Styleguide
 gulp.task('serve-w-s', ['sass', 'htmlmin'], function() {
     bs.init({
@@ -99,6 +106,8 @@ gulp.task('serve-w-s', ['sass', 'htmlmin'], function() {
     gulp.watch("dev/images/**/*", ['images']).on('change', bs.reload);
     gulp.watch("dev/scripts/**/*.js", ['scripts']).on('change', bs.reload);
     gulp.watch("dev/**/*.html", ['htmlmin']).on('change', bs.reload);
+    // gulp.watch("dev/images/**/*", ['exportWebP']).on('change', bs.reload);
+
 });
 
 gulp.task('webstandards', function() {

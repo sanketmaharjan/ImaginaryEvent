@@ -11,6 +11,7 @@
             @include pager($color-brand, $color-grey-dark, $color-brand);
             &.active{
                 color: $color-grey-dark;
+                background-color: transparent;
             }
         }
         .separator{
@@ -34,6 +35,7 @@
             @include pager($color-brand, $color-grey-dark, $color-brand);
             &.active{
                 color: $color-grey-dark;
+                background-color: transparent;
             }
         }
     }
