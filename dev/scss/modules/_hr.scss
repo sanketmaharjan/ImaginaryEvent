@@ -1,0 +1,9 @@
+.hr{
+    border-top: 1px solid #eee;
+
+    &--thick{
+        border-top: 2px solid #eee;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

@@ -9,6 +9,7 @@ button {
 .form-control,
 textarea {
     width: 100%;
+    resize: none;
     @include font-size(1.6);
     @include border-radius(0);
     
